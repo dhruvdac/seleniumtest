@@ -1,0 +1,30 @@
+package com.seleniumtest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class InputValidationTest {
+	
+	WebDriver driver;
+	
+	@BeforeClass
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.get("https://testpages.eviltester.com/styled/validation/input-validation.html");
+		driver.manage().window().maximize();
+	}
+	
+	@Test
+	public void inputTest() {
+		
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		driver.close();
+	}
+
+}
